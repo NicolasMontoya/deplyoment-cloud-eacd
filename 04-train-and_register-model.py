@@ -2,18 +2,35 @@ from azureml.core import Workspace
 from azureml.core import Experiment
 from azureml.core import Environment
 from azureml.core import ScriptRunConfig
-from azureml.core import Dataset
 from azureml.core import Model
+import argparse
 
 
 if __name__ == "__main__":
+
+    parser = argparse.ArgumentParser()      
+    parser.add_argument(
+        '--solver',
+        type=str,
+        default="liblinear",
+        help='Solver para la regresión logistica'
+    )
+    parser.add_argument(
+        '--random_state',
+        type=int,
+        default=42,
+        help='Entero aleatorio'
+    )
+    args = parser.parse_args()
+
     ws = Workspace.from_config()
     experiment = Experiment(workspace=ws, name='cloud-heart-attack')
 
     config = ScriptRunConfig(
         source_directory='./src',
         script='remote-train.py',
-        compute_target='cpu-cluster'
+        compute_target='cpu-cluster',
+        arguments=['--solver', args.solver, '--random_state', args.random_state]
     )
     # set up pytorch environment
     env = Environment.from_conda_specification(
