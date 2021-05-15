@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "10d3c8c0-8b4d-4427-8b46-1a58834bb3ca",
+		"name": "ML Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Test ML Service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/score?age=10&sex=1&cp=3&trtbps=80&chol=233&fbs=1&restecg=0&thalachh=10&exng=0&oldpeak=2.3&slp=0&caa=0&thall=1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"score"
+					],
+					"query": [
+						{
+							"key": "age",
+							"value": "10"
+						},
+						{
+							"key": "sex",
+							"value": "1"
+						},
+						{
+							"key": "cp",
+							"value": "3"
+						},
+						{
+							"key": "trtbps",
+							"value": "80"
+						},
+						{
+							"key": "chol",
+							"value": "233"
+						},
+						{
+							"key": "fbs",
+							"value": "1"
+						},
+						{
+							"key": "restecg",
+							"value": "0"
+						},
+						{
+							"key": "thalachh",
+							"value": "10"
+						},
+						{
+							"key": "exng",
+							"value": "0"
+						},
+						{
+							"key": "oldpeak",
+							"value": "2.3"
+						},
+						{
+							"key": "slp",
+							"value": "0"
+						},
+						{
+							"key": "caa",
+							"value": "0"
+						},
+						{
+							"key": "thall",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

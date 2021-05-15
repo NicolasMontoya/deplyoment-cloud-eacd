@@ -84,3 +84,7 @@ NOTA: Si se quiere es posible usar azure cli para no tener que gestionar la aute
   - model_version = Versión del modelo en AzureML.
 
 ![Datasets](images/img5.jpg)
+
+- Consumo del endpoint
+
+![Datasets](images/img6.jpg)
